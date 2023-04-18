@@ -1,12 +1,14 @@
 import { useSelector } from "react-redux";
 function CarsContainer() {
-    const volvo = useSelector((state) => {
-        return state.volvo
+    const state = useSelector((state) => {
+        return state
     })
     return (
         <section>
             <h2>Cars in stock:</h2>
-            <p>Volvos: {volvo}</p>
+            <p>Volvos: {state.volvo}</p>
+            <p>Audis: {state.audi}</p>
+            <p>Skodas: {state.skoda}</p>
         </section>
     );
 }
