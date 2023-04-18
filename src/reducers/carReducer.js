@@ -11,6 +11,15 @@ const carReducer = (state = store, action) => {
             return Object.assign({}, state, {
                 volvo: state.volvo + action.payload
             })
+        case "BUY_AUDI":
+            // vi vill returnera det nya statet utefter vad vi skickat in
+            return Object.assign({}, state, {
+                audi: state.audi - action.payload
+            })
+        case "ADD_AUDI":
+            return Object.assign({}, state, {
+                audi: state.audi + action.payload
+            })
         default:
             return state;
     }
