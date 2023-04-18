@@ -1,18 +1,18 @@
 import { useDispatch } from 'react-redux'
 import './App.css'
 import CarsContainer from './Components/CarsContainer'
-import { buyCar, addCar } from './actions/carActions'
+import { buyVolvo, addVolvo } from './actions/carActions'
 
 function App() {
   const dispatch = useDispatch();
 
   function handleBuy() {
     // här vill vi kalla på vår action som motsvarar det vi vill göra
-    dispatch(buyCar('volvo', 1))
+    dispatch(buyVolvo(1))
   }
   function handleAdd() {
     // här vill vi kalla på vår action som motsvarar det vi vill göra
-    dispatch(addCar('volvo', 3))
+    dispatch(addVolvo(3))
   }
 
   return (
